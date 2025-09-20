@@ -74,7 +74,7 @@ Wemos D1 Mini                                                  DMX connector
     GND  ---------------------------------------------+                                       
 ```
 
-## Cable
+## DIN 5 pins cable wiring
 ```
                       Power Supply
                           +5V
@@ -125,13 +125,12 @@ Wemos D1 Mini
 ## 🔋 Powering the Wemos D1 Mini
 
 The smoke machine’s **timer port +5V cannot power the Wemos D1 Mini board** (insufficient current).  
-Use one of the standard Arduino Uno power options instead:
+Use one of the standard Wemos D1 Mini power options instead:
 
-| Method | Pin/Port | Notes |
-|--------|----------|-------|
-| **USB** | USB-B port | Easiest option, 5V regulated by PC/adapter |
-| **+5V pin** | Header pin labeled `5V` | Direct regulated 5V input |
-
+| Method      | Pin/Port                | Notes                                      |
+|-------------|-------------------------|--------------------------------------------|
+| **USB**     | USB-B port              | Easiest option, 5V regulated by PC/adapter |
+| **+5V pin** | Header pin labeled `5V` | Direct regulated 5V input                  |
 
 ⚠️ Never connect power simultaneously to multiple inputs (e.g. USB and 5V) unless you know exactly how Wemos’s auto-select circuitry works.  
 
