@@ -198,8 +198,9 @@ The Wemos D1 Mini’s digital output pin cannot directly drive the smoke machine
 
 ## Photos
 
-![Outside](Photo1.jpg)
-![Inside](Photo2.jpg)
+![Front](Photo1.jpg)
+![Rear](Photo2.jpg)
+![Rear Connection](Photo3.jpg)
 
 ## ⚠️ Safety Notes
 - Smoke machines run on **mains voltage** — isolate low-voltage electronics.  
