@@ -64,7 +64,7 @@
 
 // MIMETIK-M smoke machine configuration
 
-#define SMOKE_DMX_CHANNEL 504
+#define SMOKE_DMX_CHANNEL 503
 
 #define READY_PIN         D7     // GPIO13 Input from machine READY
 #define READY_LED_PIN     D5     // GPIO14 LED mirrors READY
