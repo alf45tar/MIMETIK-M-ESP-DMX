@@ -73,26 +73,36 @@ Wemos D1 Mini                                          DMX connector
     GND  -------------------------------------+                                       
 ```
 
-## Timer port wiring
+## Cable
 ```
-Wemos D1 Mini                                Timer Port
+                      Power Supply
+                          +5V
+                           +
+Wemos D1 Mini              |                  MIMETIK-M Timer Port
+                           |
+     5V  ------------------+----------------  NC
 
-                           +---------------  SMOKE
+     D7  -----------------------------------  READY
+
+
+                           +----------------  SMOKE
                            |
                            |
                            |  
                          | /  C
              470-680 Ω   |/     
-     D2  -----\/\/\/\----|    PN22222
+     D2  -----\/\/\/\----|    PN22222         +5V (not connected)
                        B |\
                          | v  E
                            |
                            |
+                           | 
+    GND  ------------------+----------------  GND
                            |
-    GND  ------------------+---------------  GND                    
-
-     D7  ----------------------------------  READY
-
+                           |
+                           +
+                          GND
+                      Power Supply                
 ```
 
 ## Led wiring (optional)
@@ -111,33 +121,7 @@ Wemos D1 Mini
     GND  -------------------------+            
 ```
 
-## Cable
-```
-                   Power Supply
-                       +5V
-                        +
-Wemos D1 Mini           |                 MIMETIK-M Timer Port
-                        |
-     5V  ---------------+---------------  NC
-
-     D7  -------------------------------  READY
-
-     D2  -------------------------------  SMOKE
-
-                                          +5V
-     
-    GND  ---------------+---------------  GND
-                        |
-                        |
-                        +
-                       GND
-                   Power Supply                
-```
-
-
-
-
-## 🔋 Powering the Arduino
+## 🔋 Powering the Wemos D1 Mini
 
 The smoke machine’s **timer port +5V cannot power the Wemos D1 Mini board** (insufficient current).  
 Use one of the standard Arduino Uno power options instead:
