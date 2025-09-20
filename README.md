@@ -28,19 +28,15 @@ Provides pulse-based DMX smoke control with ready-state detection and a neat 3D-
 ## 📌 Timer Port Pinout
 ![Pinout](https://github.com/alf45tar/MIMETIK-M-DMX/blob/b954deec4e5cc736611d55866040341b4a071952/Timer%20Pinout.jpg)
 
-
 | Label | Direction | Description |
 |-------|-----------|-------------|
 | GND   | Common    | Ground reference |
-| +5V   | Output    | **Low-current reference only** — cannot power Arduino |
+| +5V   | Output    | **Low-current reference only** — cannot power Wemos D1 Mini |
 | SMOKE | Input     | Active LOW → pulling to GND triggers smoke |
 | READY | Output    | HIGH (3.5V) when warmed up, LOW during warm-up |
 | NC    | –         | Not connected |
 
 ⚠️ **Important:** The +5V pin from the timer/remote port is **not able to supply enough current to run an Wemos D1 Mini**.  
-Use a separate power source (USB or stable +5V).
-
----
 
 ## 🔌 Arduino Connections
 | Wemos D1 Mini Pin | Function | Notes |
@@ -122,18 +118,6 @@ Wemos D1 Mini
     GND  -------------------------+            
 ```
 
-## 🔋 Powering the Wemos D1 Mini
-
-The smoke machine’s **timer port +5V cannot power the Wemos D1 Mini board** (insufficient current).  
-Use one of the standard Wemos D1 Mini power options instead:
-
-| Method      | Pin/Port                | Notes                                      |
-|-------------|-------------------------|--------------------------------------------|
-| **USB**     | USB-B port              | Easiest option, 5V regulated by PC/adapter |
-| **+5V pin** | Header pin labeled `5V` | Direct regulated 5V input                  |
-
-⚠️ Never connect power simultaneously to multiple inputs (e.g. USB and 5V) unless you know exactly how Wemos’s auto-select circuitry works.  
-
 ## ⚙️ Software Behavior
 - **DMX channel:** `503` (change in code if desired)
 - **READY = LOW** → warm-up → smoke disabled  
@@ -149,9 +133,9 @@ Use one of the standard Wemos D1 Mini power options instead:
   - At DMX 255, duration = period → machine runs continuously  
   - Responds instantly to DMX changes mid-cycle  
 - **LED indicators**  
+  - D5: LED follows READY state  
   - D6: PWM LED shows DMX level  
   - D1: LED mirrors smoke pulse (ON when machine is triggered)  
-  - D5: LED follows READY state  
 - **Failsafe**
   - Smoke is forced OFF if:
       - Machine is warming up (READY LOW)
