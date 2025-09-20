@@ -26,7 +26,8 @@ Provides pulse-based DMX smoke control with ready-state detection and a neat 3D-
 | LEDs + resistors | optional | Status & feedback indicators |
 
 ## 📌 Timer Port Pinout
-![Pinout](Timer%20Pinout.jpg)
+![Pinout](https://github.com/alf45tar/MIMETIK-M-DMX/blob/b954deec4e5cc736611d55866040341b4a071952/Timer%20Pinout.jpg)
+
 
 | Label | Direction | Description |
 |-------|-----------|-------------|
@@ -148,7 +149,7 @@ Use one of the standard Arduino Uno power options instead:
       - DMX=0
       
 ## 📊 DMX Pulse Example
-![Pulse Example](DMX%20Pulse%20Example.png)
+![Pulse Example](https://github.com/alf45tar/MIMETIK-M-DMX/blob/b954deec4e5cc736611d55866040341b4a071952/DMX%20Pulse%20Example.png)
 
 ## ▶️ Usage
 1. Print the enclosure and assemble the electronics.  
