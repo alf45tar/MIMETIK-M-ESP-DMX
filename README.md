@@ -22,7 +22,11 @@ Provides pulse-based DMX smoke control with ready-state detection and a neat 3D-
 ## 🛠 Bill of Materials
 | Item | Quantity | Notes |
 |------|----------|-------|
-| Wemos D1 Mini or clone | 1 | Reference/tested board (⚠️ must be powered separately — not from timer port) |
+| Wemos D1 Mini or clone | 1 | Reference/tested board |
+| D1 Mini ProtoBoard     | 1 | ProtoBoard for Wemos D1 Mini |
+| NA-Housing             | 1 | 85 mm NA-Housing |
+| Female XLR 3 pins      | 1 | Panel mount female XLR 3 pins |
+| DIN 5 pins socket      | 1 | Panel mount DIN 5 pins 240° socket|
 | MAX485 **or** SN75176 module | 1 | RS485 transceiver |
 | PN2222 transistor | 1 | Smoke trigger driver |
 | LEDs + resistors | optional | Status & feedback indicators |
