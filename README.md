@@ -3,6 +3,8 @@
 DMX512 controller add-on for the **SDJ / Sagitter / Proel** [**MIMETIK-M**](https://www.sdjlighting.com/en/prodotto/sg-mimetikm-smoke-machine-mimetik-900w/)  smoke machine.
 Provides pulse-based DMX smoke control with ready-state detection and a neat 3D-printed enclosure.  
 
+![Front](Photo1.jpg)
+
 ## 💡 Compatibility
 - ✅ Tested with **SDJ Mimetik-M**  
 - ⚠️ May also work with machines sharing the **same timer/remote port pinout**  
@@ -182,7 +184,6 @@ The Wemos D1 Mini’s digital output pin cannot directly drive the smoke machine
 
 ## Photos
 
-![Front](Photo1.jpg)
 ![Rear](Photo2.jpg)
 ![Rear Connection](Photo3.jpg)
 
