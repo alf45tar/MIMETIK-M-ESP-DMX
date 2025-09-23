@@ -151,15 +151,6 @@ Wemos D1 Mini
 ## 📊 DMX Pulse Example
 ![Pulse Example](https://github.com/alf45tar/MIMETIK-M-DMX/blob/b954deec4e5cc736611d55866040341b4a071952/DMX%20Pulse%20Example.png)
 
-## ▶️ Usage
-1. Print the enclosure and assemble the electronics.  
-2. Mount to left or right side of the machine with existing screws.  
-3. Connect to the **timer/remote port**.  
-4. **Power the Arduino** via USB, barrel jack/VIN, or +5 V pin from a regulated supply.  
-   ⚠️ Do **not** use the timer port’s +5 V — it cannot supply enough current.  
-5. Upload the Arduino sketch (tested on Uno R3).  
-6. Send DMX values to the configured channel.  
-
 ## 🔧 PN2222 Transistor Notes
 
 The **PN2222** is a common NPN bipolar junction transistor (BJT) used as a **switch** in the DMX smoke machine controller.
