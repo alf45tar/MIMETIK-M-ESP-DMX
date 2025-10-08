@@ -44,7 +44,7 @@ Provides pulse-based DMX smoke control with ready-state detection and a neat 3D-
 
 ⚠️ **Important:** The +5V pin from the timer/remote port is **not able to supply enough current to run an Wemos D1 Mini**.  
 
-## 🔌 Arduino Connections
+## 🔌 Wemos D1 Mini Pin Connections
 | Wemos D1 Mini Pin | Function | Notes |
 |-------------------|----------|-------|
 | `D1` | `SMOKE_PULSE_PIN` | LED mirrors smoke pulses     |
@@ -187,7 +187,6 @@ The Wemos D1 Mini’s digital output pin cannot directly drive the smoke machine
 - Double-check wiring before powering on.  
 - Only use with machines confirmed to share the SDJ Mimetik-M pinout.  
 - ⚠️ The **+5 V timer port output cannot power the Wemos D1 Mini** (insufficient current).  
-  Use USB or the barrel jack with an external supply.  
 
 ## 📜 License
 MIT License – free to use, adapt, and improve.  
