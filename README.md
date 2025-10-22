@@ -20,16 +20,16 @@ Provides pulse-based DMX smoke control with ready-state detection and a neat 3D-
 - Compact 3D-printed enclosure
 
 ## 🛠 Bill of Materials
-| Item | Quantity | Notes |
-|------|----------|-------|
-| Wemos D1 Mini or clone | 1 | Reference/tested board |
-| D1 Mini ProtoBoard     | 1 | ProtoBoard for Wemos D1 Mini |
-| NA-Housing             | 1 | 85 mm NA-Housing |
-| Female XLR 3 pins      | 1 | Panel mount female XLR 3 pins |
-| DIN 5 pins socket      | 1 | Panel mount DIN 5 pins 240° socket|
-| MAX485 **or** SN75176 module | 1 | RS485 transceiver |
-| PN2222 transistor | 1 | Smoke trigger driver |
-| LEDs + resistors | optional | Status & feedback indicators |
+| Item                   | Quantity | Notes |
+|------------------------|----------|-------|
+| Wemos D1 Mini or clone | 1        | Reference/tested board |
+| D1 Mini ProtoBoard     | 1        | ProtoBoard for Wemos D1 Mini |
+| NA-Housing             | 1        | 85 mm NA-Housing |
+| Female XLR 3 pins      | 1        | Panel mount female XLR 3 pins |
+| DIN 5 pins socket      | 1        | Panel mount DIN 5 pins 240° socket|
+| MAX3485                | 1        | RS485 transceiver |
+| PN2222 transistor      | 1        | Smoke trigger driver |
+| LEDs + resistors       | optional | Status & feedback indicators |
 
 ## 📌 Timer Port Pinout
 ![Pinout](https://github.com/alf45tar/MIMETIK-M-DMX/blob/b954deec4e5cc736611d55866040341b4a071952/Timer%20Pinout.jpg)
@@ -60,14 +60,13 @@ Provides pulse-based DMX smoke control with ready-state detection and a neat 3D-
 ```
 Wemos D1 Mini                                                  DMX connector
 
-    +5V  ----------------------------------------------+
+    3V3  ----------------------------------------------+
                                                        |
-     RX  -----------+                                  |
-             2kΩ    |   1kΩ       +---------------+    |
-    GND  ---/\/\/\--+--/\/\/\-----| R         VCC |----+
+                                  +---------------+    |
+     RX  -------------------------| R         VCC |----+
                                   |               |
                              +----| RE/         B |----------  Data - (XLR pin 2)
-                             |    |    SN75176    |
+                             |    |    MAX3485    |
      D3  --------------------+----| DE          A |----------  Data + (XLR pin 3)
                                   |               |
      D4  -------------------------| D         GND |---+------  Ground (XLR pin 1)
