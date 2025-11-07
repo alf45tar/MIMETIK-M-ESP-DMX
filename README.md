@@ -18,6 +18,7 @@ Provides pulse-based DMX smoke control with ready-state detection and a neat 3D-
 - Smoke pulse LED (mirrors smoke firing, pin D1)  
 - READY LED (pin D5)  
 - Compact 3D-printed enclosure
+- Configuration [utility](https://github.com/alf45tar/ESP-DMX-Configuration) for macOS, Windows and Linux.
 
 ## 🛠 Bill of Materials
 | Item                   | Quantity | Notes |
