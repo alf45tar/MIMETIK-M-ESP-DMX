@@ -20,6 +20,18 @@ Provides pulse-based DMX smoke control with ready-state detection and a neat 3D-
 - Compact 3D-printed enclosure
 - Configuration [utility](https://github.com/alf45tar/ESP-DMX-Configuration) for macOS, Windows and Linux.
 
+## ✨ New Feature: Wireless Art-Net & sACN Control
+The MIMETIK-M-ESP-DMX can now receive DMX data **over Wi-Fi** using the **Art-Net** and **sACN (E1.31)** lighting network protocols.
+
+This enables full wireless integration with professional lighting software compatible with Art-Net/sACN.
+
+The ESP8266 receives Art-Net or sACN data and converts it internally into the same pulse-based smoke control logic used in wired DMX mode — maintaining full backward compatibility.
+
+## ⚙️ Configuration with ESP-DMX-Configuration App
+All network and DMX parameters (Wi-Fi credentials, protocol selection, universe, etc.) can be configured using the **[ESP-DMX-Configuration](https://github.com/alf45tar/ESP-DMX-Configuration)** application.
+
+This app communicates directly with the device over **Wi-Fi**. No source code modification or re-compilation is required — all configuration can be done through the external app with the exception of DMX channel.
+
 ## 🛠 Bill of Materials
 | Item                   | Quantity | Notes |
 |------------------------|----------|-------|
