@@ -194,11 +194,10 @@ The Wemos D1 Mini’s digital output pin cannot directly drive the smoke machine
 ![Top1](images/Top1.jpg)
 ![Top2](images/Top2.jpg)
 ![Top3](images/Top3.jpg)
-
-![Front](images/Front1pg)
+![Front](images/Front1.jpg)
 ![Back](images/Back1.jpg)
 
-### Alternative
+### Neutrik NA Housing
 
 ![Alt1](images/Photo1.jpg)
 ![Alt2](images/Photo2.jpg)
