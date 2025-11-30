@@ -1,22 +1,22 @@
 # DMX Smoke Machine Controller
 
 DMX512 controller add-on for the **SDJ / Sagitter / Proel** [**MIMETIK-M**](https://www.sdjlighting.com/en/prodotto/sg-mimetikm-smoke-machine-mimetik-900w/)  smoke machine.
-Provides pulse-based DMX smoke control with ready-state detection and a neat 3D-printed enclosure.  
+Provides pulse-based DMX smoke control with ready-state detection and a neat 3D-printed enclosure.
 
-![Front](Photo1.jpg)
+![Assembly](Assembly.jpg)
 
 ## 💡 Compatibility
-- ✅ Tested with **SDJ Mimetik-M**  
-- ⚠️ May also work with machines sharing the **same timer/remote port pinout**  
-- ❌ Not universal — always check wiring before use  
+- ✅ Tested with **SDJ Mimetik-M**
+- ⚠️ May also work with machines sharing the **same timer/remote port pinout**
+- ❌ Not universal — always check wiring before use
 
 ## ✨ Features
-- DMX512 input via RS485 transceiver  
-- READY/WARM-UP detection (machine won’t fire until warmed up)  
-- Pulse control: DMX value maps to **pulse duration** and **pulse period**  
-- Feedback PWM LED (DMX level, pin D6)  
-- Smoke pulse LED (mirrors smoke firing, pin D1)  
-- READY LED (pin D5)  
+- DMX512 input via RS485 transceiver
+- READY/WARM-UP detection (machine won’t fire until warmed up)
+- Pulse control: DMX value maps to **pulse duration** and **pulse period**
+- Feedback PWM LED (DMX level, pin D6)
+- Smoke pulse LED (mirrors smoke firing, pin D1)
+- READY LED (pin D5)
 - Compact 3D-printed enclosure
 - Configuration [utility](https://github.com/alf45tar/ESP-DMX-Configuration) for macOS, Windows and Linux.
 
@@ -55,7 +55,7 @@ This app communicates directly with the device over **Wi-Fi**. No source code mo
 | READY | Output    | HIGH (3.5V) when warmed up, LOW during warm-up |
 | NC    | –         | Not connected |
 
-⚠️ **Important:** The +5V pin from the timer/remote port is **not able to supply enough current to run an Wemos D1 Mini**.  
+⚠️ **Important:** The +5V pin from the timer/remote port is **not able to supply enough current to run an Wemos D1 Mini**.
 
 ## 🔌 Wemos D1 Mini Pin Connections
 | Wemos D1 Mini Pin | Function | Notes |
@@ -103,21 +103,21 @@ Wemos D1 Mini              |                  MIMETIK-M Timer Port
                            +----------------  SMOKE
                            |
                            |
-                           |  
+                           |
                          | /  C
-             470-680Ω    |/     
+             470-680Ω    |/
      D2  -----\/\/\/\----|    PN22222         +5V (not connected)
                        B |\
                          | v  E
                            |
                            |
-                           | 
+                           |
     GND  ------------------+----------------  GND
                            |
                            |
                            +
                           GND
-                      Power Supply                
+                      Power Supply
 ```
 
 ## Led wiring (optional)
@@ -133,33 +133,33 @@ Wemos D1 Mini
      D1  -----\/\/\/\-----|>|-----+  Smoke pulse LED
                                   |
                                   |
-    GND  -------------------------+            
+    GND  -------------------------+
 ```
 
 ## ⚙️ Software Behavior
 - **DMX channel:** `503` (change in code if desired)
-- **READY = LOW** → warm-up → smoke disabled  
-- **DMX mapping**  
-  - `0` = smoke OFF  
-  - `1` = short pulse (**0.1 s ON / 9.9 s OFF**)  
-  - `255` = continuous smoke (**1 s ON every 1 s cycle → always ON**)  
-  - Intermediate DMX values scale linearly between these extremes  
-- **Pulse cycle**  
-  - For each cycle:  
-    - Smoke ON for mapped duration  
-    - Smoke OFF until the mapped period completes  
-  - At DMX 255, duration = period → machine runs continuously  
-  - Responds instantly to DMX changes mid-cycle  
-- **LED indicators**  
-  - D5: LED follows READY state  
-  - D6: PWM LED shows DMX level  
-  - D1: LED mirrors smoke pulse (ON when machine is triggered)  
+- **READY = LOW** → warm-up → smoke disabled
+- **DMX mapping**
+  - `0` = smoke OFF
+  - `1` = short pulse (**0.1 s ON / 9.9 s OFF**)
+  - `255` = continuous smoke (**1 s ON every 1 s cycle → always ON**)
+  - Intermediate DMX values scale linearly between these extremes
+- **Pulse cycle**
+  - For each cycle:
+    - Smoke ON for mapped duration
+    - Smoke OFF until the mapped period completes
+  - At DMX 255, duration = period → machine runs continuously
+  - Responds instantly to DMX changes mid-cycle
+- **LED indicators**
+  - D5: LED follows READY state
+  - D6: PWM LED shows DMX level
+  - D1: LED mirrors smoke pulse (ON when machine is triggered)
 - **Failsafe**
   - Smoke is forced OFF if:
       - Machine is warming up (READY LOW)
       - DMX signal is lost for >3s
       - DMX=0
-      
+
 ## 📊 DMX Pulse Example
 ![Pulse Example](https://github.com/alf45tar/MIMETIK-M-DMX/blob/b954deec4e5cc736611d55866040341b4a071952/DMX%20Pulse%20Example.png)
 
@@ -191,14 +191,24 @@ The Wemos D1 Mini’s digital output pin cannot directly drive the smoke machine
 
 ## Photos
 
-![Rear](Photo2.jpg)
-![Rear Connection](Photo3.jpg)
+![Top1](images/Top1.jpg)
+![Top2](images/Top2.jpg)
+![Top3](images/Top3.jpg)
+
+![Front](images/Front1pg)
+![Back](images/Back1.jpg)
+
+### Alternative
+
+![Alt1](images/Photo1.jpg)
+![Alt2](images/Photo2.jpg)
+![Alt3](images/Photo3.jpg)
 
 ## ⚠️ Safety Notes
-- Smoke machines run on **mains voltage** — isolate low-voltage electronics.  
-- Double-check wiring before powering on.  
-- Only use with machines confirmed to share the SDJ Mimetik-M pinout.  
-- ⚠️ The **+5 V timer port output cannot power the Wemos D1 Mini** (insufficient current).  
+- Smoke machines run on **mains voltage** — isolate low-voltage electronics.
+- Double-check wiring before powering on.
+- Only use with machines confirmed to share the SDJ Mimetik-M pinout.
+- ⚠️ The **+5 V timer port output cannot power the Wemos D1 Mini** (insufficient current).
 
 ## 📜 License
-MIT License – free to use, adapt, and improve.  
+MIT License – free to use, adapt, and improve.
